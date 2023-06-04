@@ -1,7 +1,7 @@
 --1. We have  between Products and Suppliers.
 -- We’d like to show, for each product,the associated Supplier from Germany and Spain. 
 -- Show the ProductID, ProductName, and the CompanyName of the Supplier. Sort by ProductID.
-Note. The Join clause is used to join two or more relational database tables together in a logical way.
+-- Note. The Join clause is used to join two or more relational database tables together in a logical way.
 select p.ProductID, p.ProductName, s.CompanyName
 from Products p
 join Suppliers s on p.SupplierID=s.SupplierID
@@ -12,7 +12,7 @@ order by p.ProductID
 --2. We have between Orders and Shippers.
 -- We’d like to show a list of the Orders that were made, including the Shipper that was used.
 -- Show the OrderID, OrderDate (date only with alias ShortDate), and CompanyName of the Shipper, and sort by OrderID. Show only those rows with an OrderID of less than 10260.
-Note. Use strftime('%Y-%m-%d', OrderDate) function to extract only date.
+-- Note. Use strftime('%Y-%m-%d', OrderDate) function to extract only date.
 select o.OrderID, strftime('%Y-%m-%d', o.OrderDate) as ShortDate, s.CompanyName
 from Orders o
 join Shippers s on s.ShipperID=o.ShipVia

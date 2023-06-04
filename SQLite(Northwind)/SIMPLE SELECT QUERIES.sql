@@ -5,7 +5,7 @@ from orders
 
 --2. We have a table Customers. Show a list of countries where the Northwind company has customers 
 -- and the number of Customers who work there (alias NumberOfCustomers).
-The result should be sorted by NumberOfCustomers in descending order
+-- The result should be sorted by NumberOfCustomers in descending order
 select country, count(CustomerID) as NumberOfCustomers
 from customers c
 group by country
